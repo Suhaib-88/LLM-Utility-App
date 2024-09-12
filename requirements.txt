@@ -1,0 +1,6 @@
+openai
+faiss-cpu
+transformers
+sentence-transformers
+pinecone-client
+streamlit

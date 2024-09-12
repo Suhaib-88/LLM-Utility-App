@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM LangChain Utility</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Customizable LLM LangChain Utility</h1>
+    <form id="config-form">
+        <label for="model">Choose a model:</label>
+        <select id="model" name="model">
+            <option value="openai">OpenAI</option>
+            <option value="huggingface">Hugging Face</option>
+        </select>
+
+        <label for="embedding">Choose an embedding:</label>
+        <select id="embedding" name="embedding">
+            <option value="openai">OpenAI</option>
+            <option value="sentence-transformers">Sentence Transformers</option>
+        </select>
+
+        <label for="vector-store">Choose a vector store:</label>
+        <select id="vector-store" name="vector_store">
+            <option value="faiss">FAISS</option>
+            <option value="pinecone">Pinecone</option>
+        </select>
+
+        <label for="chain">Choose a chain:</label>
+        <select id="chain" name="chain">
+            <option value="sequential">Sequential Chain</option>
+            <option value="agent">Agent-based Chain</option>
+        </select>
+
+        <textarea id="input-text" name="input_text" placeholder="Enter your text here"></textarea>
+        <button type="submit">Run Chain</button>
+    </form>
+
+    <div id="response">
+        <h2>Response:</h2>
+        <p>{{ response }}</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

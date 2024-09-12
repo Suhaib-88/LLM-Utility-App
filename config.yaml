@@ -1,0 +1,6 @@
+{
+  "model": "OpenAI",
+  "embedding": "OpenAI",
+  "vector_store": "FAISS",
+  "chain": "Sequential Chain"
+}
