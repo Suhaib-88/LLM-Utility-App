@@ -45,9 +45,6 @@ class CodeInput(BaseInputMixin, ListableInputMixin, InputTraceMixin):
 
 
 
-
-
-
 class SecretStrInput(BaseInputMixin, DatabaseLoadMixin):
     field_type: SerializableFieldTypes = FieldTypes.PASSWORD
     # begin here
